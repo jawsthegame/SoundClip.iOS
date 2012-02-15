@@ -20,6 +20,7 @@
 		A785AAFF14EB541E00D05911 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785AAFE14EB541E00D05911 /* DropboxSDK.framework */; };
 		A785AB0214EB55DE00D05911 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A785AB0114EB55DE00D05911 /* Utilities.m */; };
 		A7C798D814EB2C780083489E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C798D714EB2C780083489E /* AVFoundation.framework */; };
+		A7CD735214EC7185002A14D1 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CD735114EC7185002A14D1 /* AudioController.m */; };
 		A7D0F7F814EB36C400EB1D2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */; };
 		A7D0F7FC14EB39FE00EB1D2A /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */; };
 		A7D0F7FE14EB405D00EB1D2A /* terror_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */; };
@@ -46,6 +47,8 @@
 		A785AB0014EB55DE00D05911 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		A785AB0114EB55DE00D05911 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		A7C798D714EB2C780083489E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A7CD735014EC7185002A14D1 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		A7CD735114EC7185002A14D1 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7D0F7FA14EB39FE00EB1D2A /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				A785AB0014EB55DE00D05911 /* Utilities.h */,
 				A785AB0114EB55DE00D05911 /* Utilities.m */,
 				A716BE6D14EB2BA500F1A81E /* Supporting Files */,
+				A7CD735014EC7185002A14D1 /* AudioController.h */,
+				A7CD735114EC7185002A14D1 /* AudioController.m */,
 			);
 			path = SoundClip;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				A7D0F7FC14EB39FE00EB1D2A /* LocationController.m in Sources */,
 				A785AAFB14EB536200D05911 /* DropboxController.m in Sources */,
 				A785AB0214EB55DE00D05911 /* Utilities.m in Sources */,
+				A7CD735214EC7185002A14D1 /* AudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

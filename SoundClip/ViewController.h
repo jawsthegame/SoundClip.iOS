@@ -9,18 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <DropboxSDK/DropboxSDK.h>
+#import "AudioController.h"
 #import "LocationController.h"
 #import "DropboxController.h"
 
-@interface ViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate, LocationControllerDelegate, DBRestClientDelegate> {
-    AVAudioRecorder *audioRecorder;
-    AVAudioPlayer *audioPlayer;
+@interface ViewController : UIViewController <AudioControllerDelegate, LocationControllerDelegate, DBRestClientDelegate> {
+    AudioController *audioController;
     LocationController *locationController;
     DropboxController *dropboxController;
-    
-    NSMutableDictionary *recordSetting;
-    NSString *recorderFileName;
-    NSString *recorderFilePath;
     
     UIButton *recordButton;        
     UIButton *playButton;
@@ -45,6 +41,8 @@
 -(IBAction)playAudio;
 -(IBAction)stop;
 -(IBAction)upload;
+
+- (void)playbackStopped;
 
 - (void)locationUpdate:(CLLocation *)location;
 - (void)locationError:(NSError *)error;

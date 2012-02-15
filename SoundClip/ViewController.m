@@ -15,102 +15,17 @@
 
 @synthesize recordButton, playButton, stopButton, uploadButton, loadingSpinner, locationLabel, timestampLabel;
 
+#pragma mark -
+#pragma mark - Button Events
+
 -(IBAction)recordAudio {
     recordButton.enabled = NO;
     playButton.enabled = NO;
     stopButton.enabled = YES;
     uploadButton.enabled = NO;
     
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    NSError *err = nil;
-    [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&err];
-    if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-        return;
-    }
-    [audioSession setActive:YES error:&err];
-    err = nil;
-    if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-        return;
-    }
-    
-    recordSetting = [[NSMutableDictionary alloc] init];
-    
-    // We can use kAudioFormatAppleIMA4 (4:1 compression) or kAudioFormatLinearPCM for nocompression
-    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
-    
-    // We can use 44100, 32000, 24000, 16000 or 12000 depending on sound quality
-    [recordSetting setValue:[NSNumber numberWithFloat:16000.0] forKey:AVSampleRateKey];
-    
-    // We can use 2(if using additional h/w) or 1 (iPhone only has one microphone)
-    [recordSetting setValue:[NSNumber numberWithInt: 1] forKey:AVNumberOfChannelsKey];
-    
-    // These settings are used if we are using kAudioFormatLinearPCM format
-    //[recordSetting setValue :[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
-    //[recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
-    //[recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
-    
-    
-    
-    // Create a new dated file
-    //NSDate *now = [NSDate dateWithTimeIntervalSinceNow:0];
-    // NSString *caldate = [now description];
-    // recorderFilePath = [[NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate] retain];
-
-    recorderFileName = [[NSString stringWithFormat:@"%@.m4a", [Utilities generateUUIDString]] retain];
-    recorderFilePath = [[NSString stringWithFormat:@"%@/%@", DOCUMENTS_FOLDER, recorderFileName] retain];
-    
-    NSLog(@"recorderFilePath: %@",recorderFilePath);
-    
-    NSURL *url = [NSURL fileURLWithPath:recorderFilePath];
-    
-    err = nil;
-    
-    NSData *audioData = [NSData dataWithContentsOfFile:[url path] options: 0 error:&err];
-    if(audioData)
-    {
-        NSFileManager *fm = [NSFileManager defaultManager];
-        [fm removeItemAtPath:[url path] error:&err];
-    }
-    
-    err = nil;
-    audioRecorder = [[ AVAudioRecorder alloc] initWithURL:url settings:recordSetting error:&err];
-    if(!audioRecorder){
-        NSLog(@"recorder: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-        UIAlertView *alert =
-        [[UIAlertView alloc] initWithTitle: @"Warning"
-                                   message: [err localizedDescription]
-                                  delegate: nil
-                         cancelButtonTitle:@"OK"
-                         otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return;
-    }
-    
-    //prepare to record
-    [audioRecorder setDelegate:self];
-    [audioRecorder prepareToRecord];
-    audioRecorder.meteringEnabled = YES;
-    
-    BOOL audioHWAvailable = audioSession.inputIsAvailable;
-    if (! audioHWAvailable) {
-        UIAlertView *cantRecordAlert =
-        [[UIAlertView alloc] initWithTitle: @"Warning"
-                                   message: @"Audio input hardware not available"
-                                  delegate: nil
-                         cancelButtonTitle:@"OK"
-                         otherButtonTitles:nil];
-        [cantRecordAlert show];
-        [cantRecordAlert release];
-        return;
-    }
-    
     [loadingSpinner startAnimating];
-    
-    // start recording
-    [audioRecorder record];
+    [audioController record];    
 }
 
 -(IBAction)playAudio {
@@ -118,20 +33,7 @@
     playButton.enabled = NO;
     stopButton.enabled = YES;
     
-    NSLog(@"playRecording");
-    // Init audio with playback capability
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    NSURL *url = [NSURL fileURLWithPath:recorderFilePath];
-    NSError *error;
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    [audioPlayer setDelegate:self];
-    audioPlayer.numberOfLoops = 0;
-    
-    [audioPlayer play];
-    NSLog(@"playing");
-
+    [audioController play];
 }
 
 -(IBAction)stop {
@@ -139,10 +41,8 @@
     playButton.enabled = YES;
     stopButton.enabled = NO;
     
-    NSLog(@"stop");
-    if(audioRecorder.recording) {
-        NSLog(@"stop recording");
-        [audioRecorder stop];
+    if(audioController.recording) {
+        [audioController stopRecord];
         
         [loadingSpinner stopAnimating];
         
@@ -157,10 +57,8 @@
         
         uploadButton.enabled = YES;
     } else {
-        NSLog(@"stop playback");
-        [audioPlayer stop];
+        [audioController stopPlay];
     }
-    NSLog(@"end of stop");
 }
 
 -(IBAction)upload {    
@@ -168,30 +66,20 @@
     // upload to dropbox
     dropboxController = [[DropboxController alloc] init];
     dropboxController.delegate = self;
-    [dropboxController uploadFile:recorderFileName localPath:recorderFilePath destDir:@"/"];
+    [dropboxController uploadFile:audioController.recorderFileName localPath:audioController.recorderFilePath destDir:@"/"];
 }
 
--(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
-{
+#pragma mark -
+#pragma mark - AudioControllerDelegate
+
+- (void)playbackStopped {
     recordButton.enabled = YES;
     playButton.enabled = YES;
     stopButton.enabled = NO;
 }
 
--(void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
-{
-    NSLog(@"Decode Error occurred");
-}
-
--(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag
-{
-    NSLog(@"Record successful?");
-}
-
--(void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder *)recorder error:(NSError *)error
-{
-    NSLog(@"Encode Error occurred");
-}
+#pragma mark -
+#pragma mark - LocationControllerDelegate
 
 - (void)locationUpdate:(CLLocation *)location {
     locationLabel.text = location.description;
@@ -200,7 +88,10 @@
 - (void)locationError:(NSError *)error {
     
 }
-    
+ 
+#pragma mark -
+#pragma mark - DBRestClientDelegate
+
 - (void)restClient:(DBRestClient*)client uploadedFile:(NSString*)destPath
               from:(NSString*)srcPath metadata:(DBMetadata*)metadata {
     
@@ -210,6 +101,9 @@
 - (void)restClient:(DBRestClient*)client uploadFileFailedWithError:(NSError*)error {
     NSLog(@"File upload failed with error - %@", error);
 }
+
+#pragma mark -
+#pragma mark - System Events
 
 - (void)didReceiveMemoryWarning
 {
@@ -222,6 +116,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    audioController = [[AudioController alloc] init];
+    audioController.delegate = self;
     
     if (![[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] link];
@@ -268,8 +165,7 @@
 
 - (void)dealloc
 {
-    [audioPlayer release];
-    [audioRecorder release];
+    [audioController release];
     [locationController release];
     [dropboxController release];
     [super dealloc];
