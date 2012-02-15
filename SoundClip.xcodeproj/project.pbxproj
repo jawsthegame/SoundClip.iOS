@@ -118,9 +118,9 @@
 				A785AAFA14EB536200D05911 /* DropboxController.m */,
 				A785AB0014EB55DE00D05911 /* Utilities.h */,
 				A785AB0114EB55DE00D05911 /* Utilities.m */,
-				A716BE6D14EB2BA500F1A81E /* Supporting Files */,
 				A7CD735014EC7185002A14D1 /* AudioController.h */,
 				A7CD735114EC7185002A14D1 /* AudioController.m */,
+				A716BE6D14EB2BA500F1A81E /* Supporting Files */,
 			);
 			path = SoundClip;
 			sourceTree = "<group>";

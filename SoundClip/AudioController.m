@@ -16,6 +16,26 @@
 @synthesize delegate, recorderFileName, recorderFilePath;
 
 -(void)record {
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSError *error = nil;
+    NSArray *directoryContents = [fileMgr contentsOfDirectoryAtPath:DOCUMENTS_FOLDER error:&error];
+    if (error == nil) {
+        for (NSString *path in directoryContents) {
+            if ([[path pathExtension ] isEqualToString:@"m4a"]) {
+                NSString *fullPath = [DOCUMENTS_FOLDER stringByAppendingPathComponent:path];
+                BOOL removeSuccess = [fileMgr removeItemAtPath:fullPath error:&error];
+                if (!removeSuccess) {
+                    NSLog(@"Error removing file: %@", error.description);
+                }
+            }
+        }
+    } else {
+        NSLog(@"Error getting directory contents: %@", error.description);
+    }
+
+    [fileMgr removeItemAtPath:[NSString stringWithFormat:@"%@/*.caf", DOCUMENTS_FOLDER] error:nil];
+    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:DOCUMENTS_FOLDER error:nil]);
+    
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *err = nil;
     [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&err];

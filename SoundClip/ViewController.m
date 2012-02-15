@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "Utilities.h"
-
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 @implementation ViewController
 
