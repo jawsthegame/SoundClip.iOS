@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A716BE6714EB2BA500F1A81E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A716BE6614EB2BA500F1A81E /* UIKit.framework */; };
+		A716BE6914EB2BA500F1A81E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A716BE6814EB2BA500F1A81E /* Foundation.framework */; };
+		A716BE6B14EB2BA500F1A81E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A716BE6A14EB2BA500F1A81E /* CoreGraphics.framework */; };
+		A716BE7114EB2BA500F1A81E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A716BE6F14EB2BA500F1A81E /* InfoPlist.strings */; };
+		A716BE7314EB2BA500F1A81E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A716BE7214EB2BA500F1A81E /* main.m */; };
+		A716BE7714EB2BA500F1A81E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A716BE7614EB2BA500F1A81E /* AppDelegate.m */; };
+		A716BE7A14EB2BA500F1A81E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A716BE7914EB2BA500F1A81E /* ViewController.m */; };
+		A716BE7D14EB2BA500F1A81E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A716BE7B14EB2BA500F1A81E /* ViewController.xib */; };
+		A785AAF814EB533C00D05911 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785AAF714EB533C00D05911 /* Security.framework */; };
+		A785AAFB14EB536200D05911 /* DropboxController.m in Sources */ = {isa = PBXBuildFile; fileRef = A785AAFA14EB536200D05911 /* DropboxController.m */; };
+		A785AAFF14EB541E00D05911 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785AAFE14EB541E00D05911 /* DropboxSDK.framework */; };
+		A785AB0214EB55DE00D05911 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A785AB0114EB55DE00D05911 /* Utilities.m */; };
+		A7C798D814EB2C780083489E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C798D714EB2C780083489E /* AVFoundation.framework */; };
+		A7D0F7F814EB36C400EB1D2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */; };
+		A7D0F7FC14EB39FE00EB1D2A /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */; };
+		A7D0F7FE14EB405D00EB1D2A /* terror_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A716BE6214EB2BA500F1A81E /* SoundClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A716BE6614EB2BA500F1A81E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A716BE6814EB2BA500F1A81E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A716BE6A14EB2BA500F1A81E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A716BE6E14EB2BA500F1A81E /* SoundClip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundClip-Info.plist"; sourceTree = "<group>"; };
+		A716BE7014EB2BA500F1A81E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A716BE7214EB2BA500F1A81E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A716BE7414EB2BA500F1A81E /* SoundClip-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundClip-Prefix.pch"; sourceTree = "<group>"; };
+		A716BE7514EB2BA500F1A81E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A716BE7614EB2BA500F1A81E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A716BE7814EB2BA500F1A81E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A716BE7914EB2BA500F1A81E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A716BE7C14EB2BA500F1A81E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A785AAF714EB533C00D05911 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A785AAF914EB536200D05911 /* DropboxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxController.h; sourceTree = "<group>"; };
+		A785AAFA14EB536200D05911 /* DropboxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxController.m; sourceTree = "<group>"; };
+		A785AAFE14EB541E00D05911 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		A785AB0014EB55DE00D05911 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		A785AB0114EB55DE00D05911 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		A7C798D714EB2C780083489E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7D0F7FA14EB39FE00EB1D2A /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terror_icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A716BE5F14EB2BA500F1A81E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A785AAF814EB533C00D05911 /* Security.framework in Frameworks */,
+				A7D0F7F814EB36C400EB1D2A /* CoreLocation.framework in Frameworks */,
+				A7C798D814EB2C780083489E /* AVFoundation.framework in Frameworks */,
+				A716BE6714EB2BA500F1A81E /* UIKit.framework in Frameworks */,
+				A716BE6914EB2BA500F1A81E /* Foundation.framework in Frameworks */,
+				A716BE6B14EB2BA500F1A81E /* CoreGraphics.framework in Frameworks */,
+				A785AAFF14EB541E00D05911 /* DropboxSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A716BE5714EB2BA500F1A81E = {
+			isa = PBXGroup;
+			children = (
+				A716BE6C14EB2BA500F1A81E /* SoundClip */,
+				A716BE6514EB2BA500F1A81E /* Frameworks */,
+				A716BE6314EB2BA500F1A81E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A716BE6314EB2BA500F1A81E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A716BE6214EB2BA500F1A81E /* SoundClip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A716BE6514EB2BA500F1A81E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A785AAFE14EB541E00D05911 /* DropboxSDK.framework */,
+				A785AAF714EB533C00D05911 /* Security.framework */,
+				A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */,
+				A7C798D714EB2C780083489E /* AVFoundation.framework */,
+				A716BE6614EB2BA500F1A81E /* UIKit.framework */,
+				A716BE6814EB2BA500F1A81E /* Foundation.framework */,
+				A716BE6A14EB2BA500F1A81E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A716BE6C14EB2BA500F1A81E /* SoundClip */ = {
+			isa = PBXGroup;
+			children = (
+				A716BE7514EB2BA500F1A81E /* AppDelegate.h */,
+				A716BE7614EB2BA500F1A81E /* AppDelegate.m */,
+				A716BE7814EB2BA500F1A81E /* ViewController.h */,
+				A716BE7914EB2BA500F1A81E /* ViewController.m */,
+				A716BE7B14EB2BA500F1A81E /* ViewController.xib */,
+				A7D0F7FA14EB39FE00EB1D2A /* LocationController.h */,
+				A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */,
+				A785AAF914EB536200D05911 /* DropboxController.h */,
+				A785AAFA14EB536200D05911 /* DropboxController.m */,
+				A785AB0014EB55DE00D05911 /* Utilities.h */,
+				A785AB0114EB55DE00D05911 /* Utilities.m */,
+				A716BE6D14EB2BA500F1A81E /* Supporting Files */,
+			);
+			path = SoundClip;
+			sourceTree = "<group>";
+		};
+		A716BE6D14EB2BA500F1A81E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */,
+				A716BE6E14EB2BA500F1A81E /* SoundClip-Info.plist */,
+				A716BE6F14EB2BA500F1A81E /* InfoPlist.strings */,
+				A716BE7214EB2BA500F1A81E /* main.m */,
+				A716BE7414EB2BA500F1A81E /* SoundClip-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A716BE6114EB2BA500F1A81E /* SoundClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A716BE8014EB2BA500F1A81E /* Build configuration list for PBXNativeTarget "SoundClip" */;
+			buildPhases = (
+				A716BE5E14EB2BA500F1A81E /* Sources */,
+				A716BE5F14EB2BA500F1A81E /* Frameworks */,
+				A716BE6014EB2BA500F1A81E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundClip;
+			productName = SoundClip;
+			productReference = A716BE6214EB2BA500F1A81E /* SoundClip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A716BE5914EB2BA500F1A81E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A716BE5C14EB2BA500F1A81E /* Build configuration list for PBXProject "SoundClip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A716BE5714EB2BA500F1A81E;
+			productRefGroup = A716BE6314EB2BA500F1A81E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A716BE6114EB2BA500F1A81E /* SoundClip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A716BE6014EB2BA500F1A81E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A716BE7114EB2BA500F1A81E /* InfoPlist.strings in Resources */,
+				A716BE7D14EB2BA500F1A81E /* ViewController.xib in Resources */,
+				A7D0F7FE14EB405D00EB1D2A /* terror_icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A716BE5E14EB2BA500F1A81E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A716BE7314EB2BA500F1A81E /* main.m in Sources */,
+				A716BE7714EB2BA500F1A81E /* AppDelegate.m in Sources */,
+				A716BE7A14EB2BA500F1A81E /* ViewController.m in Sources */,
+				A7D0F7FC14EB39FE00EB1D2A /* LocationController.m in Sources */,
+				A785AAFB14EB536200D05911 /* DropboxController.m in Sources */,
+				A785AB0214EB55DE00D05911 /* Utilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A716BE6F14EB2BA500F1A81E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A716BE7014EB2BA500F1A81E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A716BE7B14EB2BA500F1A81E /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A716BE7C14EB2BA500F1A81E /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A716BE7E14EB2BA500F1A81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A716BE7F14EB2BA500F1A81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A716BE8114EB2BA500F1A81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Downloads/dropbox-ios-sdk-1.1\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoundClip/SoundClip-Prefix.pch";
+				INFOPLIST_FILE = "SoundClip/SoundClip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A716BE8214EB2BA500F1A81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Downloads/dropbox-ios-sdk-1.1\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoundClip/SoundClip-Prefix.pch";
+				INFOPLIST_FILE = "SoundClip/SoundClip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A716BE5C14EB2BA500F1A81E /* Build configuration list for PBXProject "SoundClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A716BE7E14EB2BA500F1A81E /* Debug */,
+				A716BE7F14EB2BA500F1A81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A716BE8014EB2BA500F1A81E /* Build configuration list for PBXNativeTarget "SoundClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A716BE8114EB2BA500F1A81E /* Debug */,
+				A716BE8214EB2BA500F1A81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A716BE5914EB2BA500F1A81E /* Project object */;
+}
