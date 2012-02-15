@@ -38,7 +38,7 @@
     recordSetting = [[NSMutableDictionary alloc] init];
     
     // We can use kAudioFormatAppleIMA4 (4:1 compression) or kAudioFormatLinearPCM for nocompression
-    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatAppleIMA4] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
     
     // We can use 44100, 32000, 24000, 16000 or 12000 depending on sound quality
     [recordSetting setValue:[NSNumber numberWithFloat:16000.0] forKey:AVSampleRateKey];
@@ -58,7 +58,7 @@
     // NSString *caldate = [now description];
     // recorderFilePath = [[NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate] retain];
 
-    recorderFileName = [[NSString stringWithFormat:@"%@.caf", [Utilities generateUUIDString]] retain];
+    recorderFileName = [[NSString stringWithFormat:@"%@.m4a", [Utilities generateUUIDString]] retain];
     recorderFilePath = [[NSString stringWithFormat:@"%@/%@", DOCUMENTS_FOLDER, recorderFileName] retain];
     
     NSLog(@"recorderFilePath: %@",recorderFilePath);
