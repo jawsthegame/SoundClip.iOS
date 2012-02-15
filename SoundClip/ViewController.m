@@ -13,12 +13,13 @@
 
 @implementation ViewController
 
-@synthesize recordButton, playButton, stopButton, loadingSpinner, locationLabel, timestampLabel;
+@synthesize recordButton, playButton, stopButton, uploadButton, loadingSpinner, locationLabel, timestampLabel;
 
 -(IBAction)recordAudio {
     recordButton.enabled = NO;
     playButton.enabled = NO;
     stopButton.enabled = YES;
+    uploadButton.enabled = NO;
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *err = nil;
@@ -154,15 +155,20 @@
         NSDate *date = [NSDate date];
         timestampLabel.text = date.description;
         
-        // upload to dropbox
-        dropboxController = [[DropboxController alloc] init];
-        dropboxController.delegate = self;
-        [dropboxController uploadFile:recorderFileName localPath:recorderFilePath destDir:@"/"];
+        uploadButton.enabled = YES;
     } else {
         NSLog(@"stop playback");
         [audioPlayer stop];
     }
     NSLog(@"end of stop");
+}
+
+-(IBAction)upload {    
+    uploadButton.enabled = NO;
+    // upload to dropbox
+    dropboxController = [[DropboxController alloc] init];
+    dropboxController.delegate = self;
+    [dropboxController uploadFile:recorderFileName localPath:recorderFilePath destDir:@"/"];
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
@@ -222,7 +228,9 @@
     }
     
     recordButton.enabled = YES;
+    playButton.enabled = NO;
     stopButton.enabled = NO;
+    uploadButton.enabled = NO;
 }
 
 - (void)viewDidUnload

@@ -25,6 +25,7 @@
     UIButton *recordButton;        
     UIButton *playButton;
     UIButton *stopButton;
+    UIButton *uploadButton;
     
     UIActivityIndicatorView *loadingSpinner;
     
@@ -35,6 +36,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *recordButton;
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
 @property (nonatomic, retain) IBOutlet UIButton *stopButton;
+@property (nonatomic, retain) IBOutlet UIButton *uploadButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @property (nonatomic, retain) IBOutlet UILabel *locationLabel;
 @property (nonatomic, retain) IBOutlet UILabel *timestampLabel;
@@ -42,6 +44,7 @@
 -(IBAction)recordAudio;
 -(IBAction)playAudio;
 -(IBAction)stop;
+-(IBAction)upload;
 
 - (void)locationUpdate:(CLLocation *)location;
 - (void)locationError:(NSError *)error;
