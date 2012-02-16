@@ -15,6 +15,7 @@
 		A716BE7714EB2BA500F1A81E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A716BE7614EB2BA500F1A81E /* AppDelegate.m */; };
 		A716BE7A14EB2BA500F1A81E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A716BE7914EB2BA500F1A81E /* ViewController.m */; };
 		A716BE7D14EB2BA500F1A81E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A716BE7B14EB2BA500F1A81E /* ViewController.xib */; };
+		A73AD35614ECB89800D5E71D /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = A73AD35514ECB89800D5E71D /* mic.png */; };
 		A785AAF814EB533C00D05911 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785AAF714EB533C00D05911 /* Security.framework */; };
 		A785AAFB14EB536200D05911 /* DropboxController.m in Sources */ = {isa = PBXBuildFile; fileRef = A785AAFA14EB536200D05911 /* DropboxController.m */; };
 		A785AAFF14EB541E00D05911 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785AAFE14EB541E00D05911 /* DropboxSDK.framework */; };
@@ -23,7 +24,6 @@
 		A7CD735214EC7185002A14D1 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CD735114EC7185002A14D1 /* AudioController.m */; };
 		A7D0F7F814EB36C400EB1D2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */; };
 		A7D0F7FC14EB39FE00EB1D2A /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */; };
-		A7D0F7FE14EB405D00EB1D2A /* terror_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +40,7 @@
 		A716BE7814EB2BA500F1A81E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A716BE7914EB2BA500F1A81E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A716BE7C14EB2BA500F1A81E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A73AD35514ECB89800D5E71D /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
 		A785AAF714EB533C00D05911 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A785AAF914EB536200D05911 /* DropboxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxController.h; sourceTree = "<group>"; };
 		A785AAFA14EB536200D05911 /* DropboxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxController.m; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		A7D0F7F714EB36C400EB1D2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7D0F7FA14EB39FE00EB1D2A /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		A7D0F7FB14EB39FE00EB1D2A /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
-		A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terror_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		A716BE6D14EB2BA500F1A81E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7D0F7FD14EB405D00EB1D2A /* terror_icon.png */,
+				A73AD35514ECB89800D5E71D /* mic.png */,
 				A716BE6E14EB2BA500F1A81E /* SoundClip-Info.plist */,
 				A716BE6F14EB2BA500F1A81E /* InfoPlist.strings */,
 				A716BE7214EB2BA500F1A81E /* main.m */,
@@ -189,7 +189,7 @@
 			files = (
 				A716BE7114EB2BA500F1A81E /* InfoPlist.strings in Resources */,
 				A716BE7D14EB2BA500F1A81E /* ViewController.xib in Resources */,
-				A7D0F7FE14EB405D00EB1D2A /* terror_icon.png in Resources */,
+				A73AD35614ECB89800D5E71D /* mic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
